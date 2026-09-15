@@ -16,7 +16,7 @@ Use the `https://xxx.workers.dev` URL issued after `make deploy`.
 ## AnythingLLM Mobile setup
 
 1. Choose Generic OpenAI Compatible
-2. Set Base URL to `https://xxx.workers.dev/zen/v1` for Zen or `https://xxx.workers.dev/go/v1` for Go
+2. Set Base URL to `https://xxx.workers.dev/zen/v1` for Zen or `https://xxx.workers.dev/zen/go/v1` for Go
 3. Enter the API key in AnythingLLM (not in the Worker)
 
 ## Development

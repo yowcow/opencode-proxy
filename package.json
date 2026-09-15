@@ -5,7 +5,7 @@
   "devDependencies": {
     "wrangler": "^4.131.2"
   },
-  "description": "Minimal Cloudflare Worker proxy that adds x-opencode-session for opencode Zen (https://opencode.ai/zen/v1) and Go (https://opencode.ai/go/v1).",
+  "description": "Minimal Cloudflare Worker proxy that adds x-opencode-session for opencode Zen (https://opencode.ai/zen/v1) and Go (https://opencode.ai/zen/go/v1).",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
