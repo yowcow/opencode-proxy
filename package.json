@@ -5,7 +5,7 @@
   "devDependencies": {
     "wrangler": "^3.114.17"
   },
-  "description": "AnythingLLM 公式 Android アプリはカスタムヘッダー `x-opencode-session` を送れないため、 opencode Zen/Go (`https://opencode.ai/zen/go/v1`) に直接繋ぐと `400 MissingSessionID` で失敗する。 この Worker はそのヘッダーを自動付与する最小構成のプロキシ。",
+  "description": "Minimal Cloudflare Worker proxy that adds x-opencode-session for opencode Zen (https://opencode.ai/zen/v1) and Go (https://opencode.ai/go/v1).",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

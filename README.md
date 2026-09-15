@@ -1,27 +1,25 @@
 # opencode-proxy
 
-AnythingLLM 公式 Android アプリはカスタムヘッダー `x-opencode-session` を送れないため、
-opencode Zen/Go (`https://opencode.ai/zen/go/v1`) に直接繋ぐと `400 MissingSessionID` で失敗する。
-この Worker はそのヘッダーを自動付与する最小構成のプロキシ。
+The official AnythingLLM Android app cannot send the custom header `x-opencode-session`, so connecting directly to opencode Zen/Go fails with `400 MissingSessionID`. This Worker is a minimal proxy that adds the header automatically.
 
-Worker 側で API キーは持たない。`Authorization` ヘッダーはクライアントから来たものをそのまま転送する。
+The Worker holds no API key. The `Authorization` header from the client is forwarded as-is.
 
-## デプロイ
+## Deploy
 
 ```sh
 make login
 make deploy
 ```
 
-`make deploy` 後に発行される `https://xxx.workers.dev` を使う。
+Use the `https://xxx.workers.dev` URL issued after `make deploy`.
 
-## AnythingLLM Mobile の設定
+## AnythingLLM Mobile setup
 
-1. Generic OpenAI Compatible を選ぶ
-2. Base URL に `https://xxx.workers.dev/v1` を設定する
-3. API キーは AnythingLLM 側に入れる（Worker 側には置かない）
+1. Choose Generic OpenAI Compatible
+2. Set Base URL to `https://xxx.workers.dev/zen/v1` for Zen or `https://xxx.workers.dev/go/v1` for Go
+3. Enter the API key in AnythingLLM (not in the Worker)
 
-## 開発
+## Development
 
 ```sh
 make dev
