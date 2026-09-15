@@ -5,7 +5,7 @@
   "devDependencies": {
     "wrangler": "^3.114.17"
   },
-  "description": "AnythingLLM 公式 Android アプリはカスタムヘッダー `x-opencode-session` を送れないため、 opencode Zen/Go (`https://opencode.ai/zen/go/v1`) に直接繋ぐと `400 MissingSessionID` で失敗する。 この Worker はそのヘッダーを自動付与する最小構成のプロキシ。",
+  "description": "The official AnythingLLM Android app cannot send the custom `x-opencode-session` header, so connecting directly to opencode Zen/Go (`https://opencode.ai/zen/go/v1`) fails with `400 MissingSessionID`. This Worker is a minimal proxy that auto-attaches that header.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
