@@ -1,10 +1,8 @@
 # opencode-proxy
 
-The official AnythingLLM Android app cannot send the custom `x-opencode-session` header,
-so connecting directly to opencode Zen/Go (`https://opencode.ai/zen/go/v1`) fails with `400 MissingSessionID`.
-This Worker is a minimal proxy that attaches the header automatically.
+The official AnythingLLM Android app cannot send the custom header `x-opencode-session`, so connecting directly to opencode Zen/Go fails with `400 MissingSessionID`. This Worker is a minimal proxy that adds the header automatically.
 
-The Worker holds no API key. The `Authorization` header is forwarded as-is from the client.
+The Worker holds no API key. The `Authorization` header from the client is forwarded as-is.
 
 ## Deploy
 
@@ -13,13 +11,13 @@ make login
 make deploy
 ```
 
-Use the `https://xxx.workers.dev` issued after `make deploy`.
+Use the `https://xxx.workers.dev` URL issued after `make deploy`.
 
-## AnythingLLM Mobile Setup
+## AnythingLLM Mobile setup
 
-1. Select Generic OpenAI Compatible
-2. Set the Base URL to `https://xxx.workers.dev/v1`
-3. Enter the API key on the AnythingLLM side (not on the Worker side)
+1. Choose Generic OpenAI Compatible
+2. Set Base URL to `https://xxx.workers.dev/zen/v1` for Zen or `https://xxx.workers.dev/go/v1` for Go
+3. Enter the API key in AnythingLLM (not in the Worker)
 
 ## Development
 

@@ -5,7 +5,7 @@
   "devDependencies": {
     "wrangler": "^3.114.17"
   },
-  "description": "The official AnythingLLM Android app cannot send the custom `x-opencode-session` header, so connecting directly to opencode Zen/Go (`https://opencode.ai/zen/go/v1`) fails with `400 MissingSessionID`. This Worker is a minimal proxy that auto-attaches that header.",
+  "description": "Minimal Cloudflare Worker proxy that adds x-opencode-session for opencode Zen (https://opencode.ai/zen/v1) and Go (https://opencode.ai/go/v1).",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
